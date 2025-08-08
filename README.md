@@ -22,54 +22,16 @@ This robot is designed for use in **RViz** and **Gazebo** for visualization, nav
 <img width="1920" height="1200" alt="Screenshot from 2025-08-08 10-56-40" src="https://github.com/user-attachments/assets/d435140e-a334-4315-8763-d818519d6d92" />
 
 
-*(Make sure you create an `images` folder in your repo and add your screenshots there)*
-
 ---
 
 ## 📂 Project Structure
 
 ```
 
-my\_robot\_urdf/
+urdf_tutorial/
 │
 ├── urdf/
-│   └── my\_robot.urdf        # The main URDF file for the robot
-│
-├── images/
-│   ├── front\_view\.png       # Screenshot of the robot (RViz/Gazebo)
-│   └── side\_view\.png        # Screenshot from another angle
-│
-└── README.md                # This file
-
-````
-
----
-
-## 🚀 How to Use
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
-````
-
-### 2️⃣ Open in RViz
-
-```bash
-ros2 launch urdf_tutorial display.launch.py model:=urdf/my_robot.urdf
-```
-
-*(Make sure you have `urdf_tutorial` installed in your ROS2 workspace)*
-
-### 3️⃣ Open in Gazebo
-
-```bash
-gazebo urdf/my_robot.urdf
-```
-
-*(You may need to convert URDF to SDF for better Gazebo compatibility)*
-
----
+│   └── my_robot.urdf        # The main URDF file for the robot
 
 ## ⚙️ Robot Features
 
