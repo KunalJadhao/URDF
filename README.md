@@ -1,40 +1,116 @@
-My Robot URDF Project
 
-This project contains a Unified Robot Description Format (URDF) model of my custom robot.
-It is designed for simulation in ROS 2 with RViz and Gazebo.
-The URDF describes the robot’s physical structure, joints, and visual elements for use in virtual testing and development.
+# 🛠️ My 4-Wheel Robot URDF
 
+A simple **4-wheeled differential drive robot** model created using **URDF** (Unified Robot Description Format) for ROS/ROS2 simulations.  
+This robot is designed for use in **RViz** and **Gazebo** for visualization, navigation experiments, and robotics learning.
 
-📌 Features
+---
 
-    Custom Robot URDF with links, joints, and meshes.
+## 📷 Preview
 
-    Visual and collision models for realistic simulation.
+![Robot Front View](images/front_view.png)
+![Robot Side View](images/side_view.png)
 
-    Configured to work with ROS 2 and RViz.
+*(Make sure you create an `images` folder in your repo and add your screenshots there)*
 
-    Gazebo integration for physics-based simulation.
-    
-Project Structure
+---
 
-My_robot_controller/
+## 📂 Project Structure
+
+```
+
+my\_robot\_urdf/
+│
 ├── urdf/
-│   ├── my_robot.urdf          # Main URDF file
-│   ├── my_robot.gazebo        # Gazebo-specific tags (optional)
-│   ├── meshes/                # 3D model files (STL/DAE)
-│   └── materials.xacro        # Material and color definitions
-├── launch/
-│   ├── display.launch.py      # Launch file for viewing in RViz
-│   └── gazebo.launch.py       # Launch file for running in Gazebo
-├── package.xml                # ROS 2 package info
-└── CMakeLists.txt             # Build instructions
+│   └── my\_robot.urdf        # The main URDF file for the robot
+│
+├── images/
+│   ├── front\_view\.png       # Screenshot of the robot (RViz/Gazebo)
+│   └── side\_view\.png        # Screenshot from another angle
+│
+└── README.md                # This file
 
-🛠 Requirements
+````
 
-    ROS 2 (e.g., Humble or Foxy)
+---
 
-    RViz 2
+## 🚀 How to Use
 
-    Gazebo (optional but recommended for physics simulation)
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>
+````
 
-    Ubuntu 20.04+
+### 2️⃣ Open in RViz
+
+```bash
+ros2 launch urdf_tutorial display.launch.py model:=urdf/my_robot.urdf
+```
+
+*(Make sure you have `urdf_tutorial` installed in your ROS2 workspace)*
+
+### 3️⃣ Open in Gazebo
+
+```bash
+gazebo urdf/my_robot.urdf
+```
+
+*(You may need to convert URDF to SDF for better Gazebo compatibility)*
+
+---
+
+## ⚙️ Robot Features
+
+* ✅ 4-wheeled differential drive layout
+* ✅ Continuous joints for wheel rotation
+* ✅ Realistic wheel positions for simulation
+* ✅ Uses `base_footprint` for proper localization in ROS
+* ✅ Materials and colors for better visualization
+
+---
+
+## 🖼️ Adding Your Own Screenshots
+
+1. Run the robot in RViz or Gazebo.
+2. Take screenshots from **front** and **side** angles.
+3. Save them into the `images` folder as `front_view.png` and `side_view.png`.
+4. Git will automatically show them in this README.
+
+Example:
+
+```bash
+mkdir images
+mv ~/Pictures/front_view.png images/
+mv ~/Pictures/side_view.png images/
+```
+
+---
+
+## 🛠️ Customization
+
+You can modify:
+
+* **Wheel size** → change `radius` and `length` in `<cylinder>`
+* **Base size** → edit `<box size="x y z"/>`
+* **Colors** → change `<material>` RGBA values
+* **Wheel positions** → adjust `xyz` in `<origin>`
+
+---
+
+## 📜 License
+
+This project is open-source under the [MIT License](LICENSE).
+
+---
+
+💡 *If you like this project, give it a ⭐ on GitHub to support my work!*
+
+```
+
+---
+
+If you want, I can also give you **ready-made example images** with a transparent background so your GitHub page looks clean until you take your own screenshots.  
+
+Do you want me to prepare those sample images for you now?
+```
